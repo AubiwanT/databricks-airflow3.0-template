@@ -1,0 +1,407 @@
+{
+  "datasets": [
+    {
+      "name": "5a1ff72f",
+      "displayName": "marts_posts_users",
+      "config": {
+        "version": "1.1",
+        "source": "data_platform_tutorial.default.marts_posts_users",
+        "dimensions": [
+          {
+            "name": "AcceptedAnswerId",
+            "expr": "source.AcceptedAnswerId",
+            "displayName": "Accepted Answer Id"
+          },
+          {
+            "name": "AnswerCount",
+            "expr": "source.AnswerCount",
+            "displayName": "Answer Count"
+          },
+          {
+            "name": "Body",
+            "expr": "source.Body",
+            "displayName": "Body"
+          },
+          {
+            "name": "ClosedDate",
+            "expr": "source.ClosedDate",
+            "displayName": "Closed Date"
+          },
+          {
+            "name": "CommentCount",
+            "expr": "source.CommentCount",
+            "displayName": "Comment Count"
+          },
+          {
+            "name": "CommunityOwnedDate",
+            "expr": "source.CommunityOwnedDate",
+            "displayName": "Community Owned Date"
+          },
+          {
+            "name": "ContentLicense",
+            "expr": "source.ContentLicense",
+            "displayName": "Content License"
+          },
+          {
+            "name": "PostCreationDate",
+            "expr": "source.PostCreationDate",
+            "displayName": "Post Creation Date"
+          },
+          {
+            "name": "FavoriteCount",
+            "expr": "source.FavoriteCount",
+            "displayName": "Favorite Count"
+          },
+          {
+            "name": "PostId",
+            "expr": "source.PostId",
+            "displayName": "Post Id"
+          },
+          {
+            "name": "LastActivityDate",
+            "expr": "source.LastActivityDate",
+            "displayName": "Last Activity Date"
+          },
+          {
+            "name": "LastEditDate",
+            "expr": "source.LastEditDate",
+            "displayName": "Last Edit Date"
+          },
+          {
+            "name": "LastEditorDisplayName",
+            "expr": "source.LastEditorDisplayName",
+            "displayName": "Last Editor Display Name"
+          },
+          {
+            "name": "LastEditorUserId",
+            "expr": "source.LastEditorUserId",
+            "displayName": "Last Editor User Id"
+          },
+          {
+            "name": "OwnerDisplayName",
+            "expr": "source.OwnerDisplayName",
+            "displayName": "Owner Display Name"
+          },
+          {
+            "name": "OwnerUserId",
+            "expr": "source.OwnerUserId",
+            "displayName": "Owner User Id"
+          },
+          {
+            "name": "ParentId",
+            "expr": "source.ParentId",
+            "displayName": "Parent Id"
+          },
+          {
+            "name": "PostTypeId",
+            "expr": "source.PostTypeId",
+            "displayName": "Post Type Id"
+          },
+          {
+            "name": "Score",
+            "expr": "source.Score",
+            "displayName": "Score"
+          },
+          {
+            "name": "Title",
+            "expr": "source.Title",
+            "displayName": "Title"
+          },
+          {
+            "name": "ViewCount",
+            "expr": "source.ViewCount",
+            "displayName": "View Count"
+          },
+          {
+            "name": "TagsArray",
+            "expr": "source.TagsArray",
+            "displayName": "Tags Array"
+          },
+          {
+            "name": "PostType",
+            "expr": "source.PostType",
+            "displayName": "Post Type"
+          },
+          {
+            "name": "AboutMe",
+            "expr": "source.AboutMe",
+            "displayName": "About Me"
+          },
+          {
+            "name": "AccountId",
+            "expr": "source.AccountId",
+            "displayName": "Account Id"
+          },
+          {
+            "name": "UserCreationDate",
+            "expr": "source.UserCreationDate",
+            "displayName": "User Creation Date"
+          },
+          {
+            "name": "DisplayName",
+            "expr": "source.DisplayName",
+            "displayName": "Display Name"
+          },
+          {
+            "name": "DownVotes",
+            "expr": "source.DownVotes",
+            "displayName": "Down Votes"
+          },
+          {
+            "name": "Id",
+            "expr": "source.Id",
+            "displayName": "Id"
+          },
+          {
+            "name": "LastAccessDate",
+            "expr": "source.LastAccessDate",
+            "displayName": "Last Access Date"
+          },
+          {
+            "name": "Location",
+            "expr": "source.Location",
+            "displayName": "Location"
+          },
+          {
+            "name": "Reputation",
+            "expr": "source.Reputation",
+            "displayName": "Reputation"
+          },
+          {
+            "name": "UpVotes",
+            "expr": "source.UpVotes",
+            "displayName": "Up Votes"
+          },
+          {
+            "name": "Views",
+            "expr": "source.Views",
+            "displayName": "Views"
+          },
+          {
+            "name": "WebsiteUrl",
+            "expr": "source.WebsiteUrl",
+            "displayName": "Website Url"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "e8cebd7d",
+      "displayName": "marts_top_tags",
+      "config": {
+        "version": "1.1",
+        "source": "data_platform_tutorial.default.marts_top_tags",
+        "dimensions": [
+          {
+            "name": "tag_exploded",
+            "expr": "source.tag_exploded",
+            "displayName": "Tag Exploded"
+          },
+          {
+            "name": "tags_count",
+            "expr": "source.tags_count",
+            "displayName": "Tags Count"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "f5d91b80",
+      "displayName": "marts_10_top_tags",
+      "queryLines": [
+        "SELECT * FROM data_platform_tutorial.default.marts_top_tags LIMIT 10;"
+      ],
+      "catalog": "data_platform_tutorial",
+      "schema": "default"
+    },
+    {
+      "name": "ae7b003d",
+      "displayName": "answer_score",
+      "queryLines": [
+        "SELECT AVG(score) AS average_answer_score, Reputation, Id as UserId\r\n",
+        "FROM data_platform_tutorial.default.marts_posts_users\r\n",
+        "WHERE PostType=\"Answer\"\r\n",
+        "GROUP BY Id, Reputation"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "ab776438",
+      "displayName": "posts_users",
+      "layout": [
+        {
+          "widget": {
+            "name": "b2b1364b",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5a1ff72f",
+                  "fields": [
+                    {
+                      "name": "monthly(PostCreationDate)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `PostCreationDate`)"
+                    },
+                    {
+                      "name": "count(PostId)",
+                      "expression": "COUNT(`PostId`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(PostCreationDate)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(PostId)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "4cdcc51e",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f5d91b80",
+                  "fields": [
+                    {
+                      "name": "tag_exploded",
+                      "expression": "`tag_exploded`"
+                    },
+                    {
+                      "name": "sum(tags_count)",
+                      "expression": "SUM(`tags_count`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "tag_exploded",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(tags_count)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "2ccd7b13",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ae7b003d",
+                  "fields": [
+                    {
+                      "name": "Reputation",
+                      "expression": "`Reputation`"
+                    },
+                    {
+                      "name": "average_answer_score",
+                      "expression": "`average_answer_score`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "Reputation",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "average_answer_score",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
