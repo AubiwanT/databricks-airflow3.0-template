@@ -15,7 +15,7 @@ Some batteries included features are:
 - CI/CD using Github actions
 - AWS ECR for container repository
 
-Following the Youtube tutorial:  youtu.be/92X54U6gm0Y
+Following the Youtube tutorial:  youtu.be/92X54U6gm0Y, all of this was done by jayzern
 ## Installation
 
 To set up a Kind cluster locally:
