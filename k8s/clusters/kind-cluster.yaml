@@ -5,5 +5,5 @@ nodes:
   - role: worker
     extraMounts:
       # Create a mount on my local machine to the container host
-      - hostPath: /Users/jayzern/databricks-airflow3.0-template/tmp/logs
+      - hostPath: /Users/AubiwanT/databricks-airflow3.0-template/tmp/logs
         containerPath: /mnt/airflow-data/logs
